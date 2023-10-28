@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Work+Sans:wght@300;400;500;700;800&display=swap');
+*{
+
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+}
+body{
+  margin:0;
+  padding: 0;
+}
+.app{
+  background: #343541;
+  display: flex;
+
+}
+h1{
+  font-size: 33px;
+  font-weight: 600;
+  padding: 200px;
+
+}
+.side-bar{
+  background-color: #202123;
+  height: 100vh;
+  width: 244px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+
+}
+.bottom-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+.info{
+  color: rgba(255,255,255,0.5);
+  font-size: 11px;
+  padding: 10px;
+}
+input{
+  border: none;
+  background-color: rgba(255,255,255,0.05);
+  width: 100%;
+  font-size: 20px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0,0,0,0.05) 0 54px 55px,
+  rgba(0,0,0,0.05) 0 -12px 30px,
+  rgba(0,0,0,0.05) 0 4px 6px,
+  rgba(0,0,0,0.05) 0 12px 3px,
+  rgba(0,0,0,0.09) 0 -3px 5px
+}
+input:focus{
+  outline: none;
+
+}
+.input-container{
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  min-width: 10px;
+  display: flex;
+  overflow: hidden; /* Hides overflowing content */
+ white-space: nowrap; /* Prevents text from wrapping */
+ text-overflow: ellipsis;
+
+}
+#submit {
+  position:absolute;
+  right: 0;
+  bottom: 20px;
+  cursor: pointer;
+}
+button{
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+nav{
+  border-top: solid 1px rgba(255,2555,255,0.5);
+  padding: 10px;
+  margin: 10px;
+}
+.history{
+  padding: 10px;
+  margin: 10px;
+  flex-direction: column;
+  height: 100%;
+  width: 85%;
+
+}
+.history li{
+  cursor: pointer;
+  display: flex;
+  list-style-type: none;
+  border: solid 0.5px rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-radius: 4px;
+  border-width: 80%;
+  padding: 15px;
+  margin-bottom: 10px;
+
+ overflow: hidden; /* Hides overflowing content */
+ white-space: nowrap; /* Prevents text from wrapping */
+ text-overflow: ellipsis; 
+  
+}
+
+.feed{
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 0%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+}
+.feed li{
+  display: flex;
+  background-color: #444656;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin: 8px 0;
+  align-items: left;
+}
+.feed p{
+  color: rgba(255,255,255,0.9);
+  font-size: 14px;
+  text-align: left;
+}
+.feed p.role{
+  min-width: fit-content;
+  text-size-adjust: 10%;
+
+}
+.feed li {
+  text-align: left;
+  color: #ffffff; /* Set your desired color */
+  font-size: 10px; /* Adjust the font size */
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 12%; /* Makes the avatars circular */
+  margin-right: 40px; /* Adjust margin as needed */
+}
+.message p.timestamp {
+  text-align: left;
+  font-size: 10px; /* Adjust the font size to make it smaller */
+  color: #888;
+}
+.feed {
+  scroll-behavior: smooth;
+  max-height: 700px; /* Adjust the maximum height as needed */
+  overflow-x: hidden;
+  font-size: large; /* Enable vertical scrollbar when content overflows */
+}
+
+.feed::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.feed::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+}
+
+.feed::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color when hovering over the scrollbar thumb */
+}
+
+.feed::-webkit-scrollbar-track {
+  background: #f1f1f1;
+   /* Color of the scrollbar track */
+}
+.side-bar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.side-bar::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+}
+
+.side-bar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color when hovering over the scrollbar thumb */
+}
+
+.side-bar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
