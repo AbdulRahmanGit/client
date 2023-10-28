@@ -31,7 +31,7 @@ const App = () => {
       }
     }
     try {
-      const response = await fetch('https://server-chatgpt-omega.vercel.app', options)
+      const response = await fetch('https://server-chatgpt-omega.vercel.app/', options)
       const data = await response.json()
       setMessage(data.choices[0].message)
     } 
