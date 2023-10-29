@@ -79,7 +79,7 @@ useEffect(() => {
       {uniqueTitles?.map((uniqueTitles, index) => <li key= {index}onClick={() =>handleClick(uniqueTitles)}>{uniqueTitles}</li>)}
       </ul>
       <nav>
-        <p>Made by Abdul Rahman</p>
+        <p>Made by <br>Abdul Rahman</br></p>
       </nav>
       </div>
       <section className = "main">
