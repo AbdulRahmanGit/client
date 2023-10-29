@@ -13,6 +13,18 @@ body{
   display: flex;
 
 }
+@media (max-width: 768px) {
+  .input-container {
+    max-width: 100%;
+  }
+  input {
+    font-size: 16px;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
 h1{
   font-size: 33px;
   font-weight: 600;
@@ -50,15 +62,7 @@ h1{
   font-size: 11px;
   padding: 10px;
 }
-@media (max-width: 768px) {
-  .input-container {
-    max-width: 100%;
-  }
-  input {
-    font-size: 16px;
-    padding: 10px;
-  }
-}
+
 
 input{
   border: none;
@@ -146,6 +150,7 @@ nav{
   padding: 20px;
   margin: 8px 0;
   align-items: left;
+  font-size: 10px;
 }
 .feed p{
   color: rgba(255,255,255,0.9);
@@ -157,11 +162,7 @@ nav{
   text-size-adjust: 10%;
 
 }
-.feed li {
-  text-align: left;
-  color: #ffffff; /* Set your desired color */
-  font-size: 10px; /* Adjust the font size */
-}
+
 .avatar {
   width: 50px;
   height: 50px;
