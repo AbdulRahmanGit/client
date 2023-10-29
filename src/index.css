@@ -80,7 +80,7 @@ input:focus{
 .input-container{
   position: relative;
   width: 100%;
-  max-width: 650px;
+  max-width: 650vh;
   min-width: 10px;
   display: flex;
   overflow: hidden; /* Hides overflowing content */
