@@ -85,11 +85,11 @@ input:focus{
   position: relative;
   width: 100%;
   max-width: 650px;
-  min-width: 10px;
   display: flex;
   overflow: hidden; /* Hides overflowing content */
  white-space: nowrap; /* Prevents text from wrapping */
  text-overflow: ellipsis;
+  min-width: fit-content;
 
 }
 #submit {
