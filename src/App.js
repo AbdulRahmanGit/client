@@ -9,6 +9,7 @@ const App = () => {
   const[ message, setMessage] = useState(null)
   const[ previousChats, setpreviousChats] = useState([])
   const[ currentTitle, setCurrentTitle] = useState(null)
+  const [loading, setLoading] = useState(false);
   const Createnewchat = () =>{
     setMessage(null)
     setValue("")
@@ -30,6 +31,9 @@ const App = () => {
         "Content-Type" : "application/json"
       }
     }
+    const handleSendMessage = () => {
+    // Show the loading animation when a request is being made
+    setLoading(true);
     try {
       const response = await fetch('https://server-chatgpt-omega.vercel.app/', options)
       const data = await response.json()
@@ -39,6 +43,8 @@ const App = () => {
       console.error(error)
     }
   }
+    setLoading(false);
+  };
   
   const addChatMessage = (role, content) => {
     const now = new Date();
