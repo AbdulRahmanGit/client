@@ -31,9 +31,7 @@ const App = () => {
         "Content-Type" : "application/json"
       }
     }
-    const handleSendMessage = () => {
-    // Show the loading animation when a request is being made
-    setLoading(true);
+   
     try {
       const response = await fetch('https://server-chatgpt-omega.vercel.app/', options)
       const data = await response.json()
@@ -43,8 +41,8 @@ const App = () => {
       console.error(error)
     }
   }
-    setLoading(false);
-  };
+   
+
   
   const addChatMessage = (role, content) => {
     const now = new Date();
