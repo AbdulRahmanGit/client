@@ -106,14 +106,11 @@ useEffect(() => {
             </li>)}
         </ul>
         <div className = "bottom-section">
-          <div className= "input-container">
-            <input value = {value} onChange={(e) => setValue(e.target.value)} />
-            {!loading ? (
+          <div className="input-container">
+  <input value={value} onChange={(e) => setValue(e.target.value)} />
+  {loading && <img className="loadingSpinner" src={loadingSpinner} alt="Loading" />}
   <div id="submit" onClick={getMessages}>➢</div>
-) : (
-  <img src={loadingSpinner} alt="Loading" />
-)}
-            </div>
+</div>
             <p className= "info">Your Feedback is appreciated</p>
 
         </div>
