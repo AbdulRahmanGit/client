@@ -89,8 +89,8 @@ input:focus{
   right: 0;
   bottom: 20px;
   cursor: pointer;
-  width: 10px;  /* Set the desired width */
-  height: 10px; /* Set the desired height */
+  width: 30px;  /* Set the desired width */
+  height: 30px; /* Set the desired height */
   background-color: transparent;
   opacity: 1;/* Set the background color to transparent */
 }
