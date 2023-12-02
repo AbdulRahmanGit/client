@@ -80,7 +80,7 @@ input:focus{
 }
 #submit {
   position:absolute;
-  right: 0;
+  right: -2;
   bottom: 20px;
   cursor: pointer;
 }
@@ -91,7 +91,7 @@ input:focus{
   cursor: pointer;
   width: 30px;  /* Set the desired width */
   height: 30px; /* Set the desired height */
-  background-color: transparent;
+  background-color: rgba(255,255,255,0.05);;
   opacity: 1;/* Set the background color to transparent */
 }
 button{
