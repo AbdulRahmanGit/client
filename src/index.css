@@ -84,7 +84,7 @@ input:focus{
   bottom: 20px;
   cursor: pointer;
 }
-.loadingSpinner {
+loadingSpinner {
   width: 3px;  /* Set the desired width */
   height: 3px; /* Set the desired height */
   background-color: transparent; /* Set the background color to transparent */
