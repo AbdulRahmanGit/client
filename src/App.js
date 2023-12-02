@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import userAvatar from './images/user-avatar.jpg'
 import assistantAvatar from './images/assistant-avatar.png'
+import loadingSpinner from './images/loading-spinner.gif'
 
 
 
@@ -22,6 +23,7 @@ const App = () => {
     setValue("")
   }
   const getMessages = async () => {
+     setLoading(true)
     const options = {
       method: "POST",
       body : JSON.stringify({
@@ -40,6 +42,10 @@ const App = () => {
     catch(error) {
       console.error(error)
     }
+     finally {
+      setLoading(false);
+    }
+
   }
    
 
@@ -102,7 +108,11 @@ useEffect(() => {
         <div className = "bottom-section">
           <div className= "input-container">
             <input value = {value} onChange={(e) => setValue(e.target.value)} />
-            <div id = "submit" onClick={getMessages}>➢</div>
+            {!loading ? (
+  <div id="submit" onClick={getMessages}>➢</div>
+) : (
+  <img src={loadingSpinner} alt="Loading" />
+)}
             </div>
             <p className= "info">Your Feedback is appreciated</p>
 
