@@ -211,6 +211,11 @@ nav{
 .side-bar::-webkit-scrollbar-thumb:hover {
   background: #555; /* Color when hovering over the scrollbar thumb */
 }
+
+
+.side-bar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
 @media (max-width: 768px) {
   /* Your styles here */
   .main{
@@ -221,8 +226,5 @@ nav{
   justify-content: space-between;
   height: auto;
   width: 100%;
-}
-
-.side-bar::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the scrollbar track */
+  }
 }
