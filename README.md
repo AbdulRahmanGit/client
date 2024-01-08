@@ -45,7 +45,7 @@ SastaGPT is a simplified, user-friendly chat application inspired by OpenAI's Ch
 ## Developer:
 
 - **Abdul Rahman**
-  - GitHub: [abdulrahman03](https://github.com/AbdulRahmanGit)
+  - GitHub: [AbdulRahmanGit](https://github.com/AbdulRahmanGit)
 
 ## How to Run:
 
