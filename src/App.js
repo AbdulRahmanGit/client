@@ -45,9 +45,9 @@ const App = () => {
      finally {
       setLoading(false);
     }
-
+console.log(message)
   }
-   
+    
 
   
   const addChatMessage = (role, content) => {
