@@ -45,7 +45,7 @@ const App = () => {
      finally {
       setLoading(false);
     }
-console.log(message)
+console.log(options)
   }
     
 
