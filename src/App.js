@@ -142,7 +142,7 @@ const handleKeyDown = (e) => {
   )}
              
             </div>
-            <p className= "info">Your Feedback is appreciated</p>
+            <p className= "info"> ChatGPT can make mistakes. Consider checking important information.</p>
         </div>
     </section>
       
