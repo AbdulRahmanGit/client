@@ -34,7 +34,7 @@ const App = () => {
     }
     setLoading(true)
     try {
-      const response = await fetch('http://localhost:8000/completions', options)
+      const response = await fetch('https://server-chatgpt-omega.vercel.app/', options)
       
       const data = await response.json()
       console.log(message)
