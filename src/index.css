@@ -84,16 +84,6 @@ input:focus{
   bottom: 20px;
   cursor: pointer;
 }
-.loadingSpinner {
-   position:absolute;
-  right: 0;
-  bottom: 20px;
-  cursor: pointer;
-  width: 30px;  /* Set the desired width */
-  height: 30px; /* Set the desired height */
-  background-color: rgba(255,255,255,0.5);;
-  opacity: 1;/* Set the background color to transparent */
-}
 button{
   border: solid 1px rgba(255, 255, 255, 0.5);
   background-color: transparent;
@@ -126,6 +116,7 @@ nav{
   border-width: 80%;
   padding: 15px;
   margin-bottom: 10px;
+  font-size: small;
 
  overflow: hidden; /* Hides overflowing content */
  white-space: nowrap; /* Prevents text from wrapping */
@@ -212,19 +203,6 @@ nav{
   background: #555; /* Color when hovering over the scrollbar thumb */
 }
 
-
 .side-bar::-webkit-scrollbar-track {
   background: #f1f1f1; /* Color of the scrollbar track */
-}
-@media (max-width: 768px) {
-  /* Your styles here */
-  .main{
-     display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  height: auto;
-  width: 100%;
-  }
 }
