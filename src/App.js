@@ -104,7 +104,7 @@ useEffect(() => {
         <div className = "bottom-section">
           <div className= "input-container">
             <input value = {value} onChange={(e) => setValue(e.target.value)} />
-            <div id = "submit" onClick={getMessages}>â¢</div>
+            <div id = "submit" onClick={getMessages}>➢</div>
             </div>
             <p className= "info">Your Feedback is appreciated</p>
 
