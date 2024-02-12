@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import userAvatar from './images/user-avatar.jpg'
+import userAvatar from './images/user-avatar.png'
 import assistantAvatar from './images/assistant-avatar.png'
 import loadingSpinner from './images/loadingSpinner.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
