@@ -23,57 +23,7 @@ const App = () => {
     setMessage(null);
     setValue("");
   };
-/*
-  const getMessages = async () => {
-    const options = {
-      method: "POST",
-      body: JSON.stringify({ message: value }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-    setLoading(true);
-    try {
-      const response = await fetch('https://server-chatgpt-omega.vercel.app/', options);
-      const data = await response.json();
-      if (data.choices && data.choices.length > 0) {
-        setMessage(data.choices[0].message);
-      } else {
-        console.error("No choices found in API response");
-      }
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
-  const addChatMessage = (role, content) => {
-    const now = new Date();
-    const options = { hour: 'numeric', minute: 'numeric', hour12: true };
-    const timestamp = now.toLocaleTimeString(undefined, options);
-    setPreviousChats((prevChats) => [
-      ...prevChats,
-      { title: currentTitle, role, content, timestamp }
-    ]);
-  };
-
-  useEffect(() => {
-    if (currentTitle && value && message) {
-      addChatMessage("user", value);
-      addChatMessage(message.role, message.content);
-    } else if (!currentTitle && value && message) {
-      setCurrentTitle(value);
-    }
-    // eslint-disable-next-line
-  }, [currentTitle, message]);
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      getMessages();
-    }
-  };
-*/
   const getMessages = async () => {
     const options = {
         method: "POST",
@@ -98,7 +48,32 @@ const App = () => {
     } finally {
         setLoading(false);
     }
-};
+  };
+
+  const addChatMessage = (role, content) => {
+    const now = new Date();
+    const options = { hour: 'numeric', minute: 'numeric', hour12: true };
+    const timestamp = now.toLocaleTimeString(undefined, options);
+    setPreviousChats((prevChats) => [
+      ...prevChats,
+      { title: currentTitle, role, content, timestamp }
+    ]);
+  };
+
+  useEffect(() => {
+    if (currentTitle && value && message) {
+      addChatMessage("user", value);
+      addChatMessage(message.role, message.content);
+    } else if (!currentTitle && value && message) {
+      setCurrentTitle(value);
+    }
+  }, [currentTitle, value, message]);
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      getMessages();
+    }
+  };
 
   const currentChat = previousChats.filter(chat => chat.title === currentTitle);
   const uniqueTitles = Array.from(new Set(previousChats.map(chat => chat.title)));
