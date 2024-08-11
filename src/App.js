@@ -23,7 +23,7 @@ const App = () => {
     setMessage(null);
     setValue("");
   };
-
+/*
   const getMessages = async () => {
     const options = {
       method: "POST",
@@ -73,6 +73,32 @@ const App = () => {
       getMessages();
     }
   };
+*/
+  const getMessages = async () => {
+    const options = {
+        method: "POST",
+        body: JSON.stringify({ message: value }),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    };
+    setLoading(true);
+    try {
+        const response = await fetch('https://server-chatgpt-omega.vercel.app/', options);
+        const data = await response.json();
+
+        // Check the structure of the returned data
+        if (data.message) {
+            setMessage(data.message); // Adjusted to match backend response format
+        } else {
+            console.error("No message found in API response");
+        }
+    } catch (error) {
+        console.error(error);
+    } finally {
+        setLoading(false);
+    }
+};
 
   const currentChat = previousChats.filter(chat => chat.title === currentTitle);
   const uniqueTitles = Array.from(new Set(previousChats.map(chat => chat.title)));
